@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:misoua/shared/colors.dart';
 
 
-class LoginPage extends StatelessWidget {
+class LoginScreen extends StatelessWidget {
 
   static const routeName = '/login';
 
@@ -37,7 +38,7 @@ class LoginPage extends StatelessWidget {
                   Spacer(flex: 2,),
                   // myRaisedButton('Login With FaceBook', Icons.face, Colors.blue, Colors.white),
                   SizedBox(height: 20,),
-                  myRaisedButton('Connexion par code OTP', Icons.lock_outline, Colors.white, Colors.grey),
+                  myRaisedButton('Connexion par code OTP', Icons.phone_android, blueColor, Colors.white),
                   Spacer(flex: 1,),
                   Text('OR', style: TextStyle(color: Colors.white, fontSize: 15.0),),
                   Spacer(flex: 1,),
@@ -55,8 +56,8 @@ class LoginPage extends StatelessWidget {
                           child: TextField(
                             decoration: InputDecoration(
                                 border: InputBorder.none,
-                                labelText: "Nom",
-                                icon: Icon(Icons.email)
+                                labelText: "Email",
+                                icon: Icon(Icons.mail_outline)
                             ),
                           ),
 
@@ -75,7 +76,7 @@ class LoginPage extends StatelessWidget {
                             decoration: InputDecoration(
                                 border: InputBorder.none,
                                 labelText: "Password",
-                                icon: Icon(Icons.vpn_key)
+                                icon: Icon(Icons.lock_outline)
                             ),
                           ),
 
@@ -86,7 +87,7 @@ class LoginPage extends StatelessWidget {
 
                         InkWell(
                           child: Container(
-                            child: Text("Have Account? Sign in", style: TextStyle(color: Colors.white, fontWeight: FontWeight.bold, fontSize: 15),),
+                            child: Text("Havn't Account? Sign up", style: TextStyle(color: Colors.white, fontWeight: FontWeight.bold, fontSize: 15),),
                           ),
                         )
 
@@ -106,7 +107,7 @@ class LoginPage extends StatelessWidget {
     );
   }
 
-  Widget myRaisedButton(String data, IconData iconData, Color back, Color font) {
+  Widget myRaisedButton(String data, IconData iconData, Color back, Color textColor) {
     return RaisedButton(
         onPressed: () => null,
       shape: RoundedRectangleBorder(
@@ -120,9 +121,9 @@ class LoginPage extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.center,
           crossAxisAlignment: CrossAxisAlignment.center,
           children: <Widget>[
-            Icon(iconData),
+            Icon(iconData, color: Colors.white,),
             SizedBox(width: 10.0,),
-            Text(data, style: TextStyle(color: font),)
+            Text(data, style: TextStyle(color: textColor),)
           ],
         ),
       ),

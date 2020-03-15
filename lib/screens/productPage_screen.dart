@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-class DetailPage extends StatelessWidget {
-  static const routeName = '/detailPage';
+class ProductPageScreen extends StatelessWidget {
+  static const routeName = '/ProductPageScreen';
   @override
   Widget build(BuildContext context) {
     return Scaffold(

@@ -1,11 +1,13 @@
 import 'package:flutter/material.dart';
-import 'package:misoua/detail_page.dart';
-import 'package:misoua/home.dart';
-import 'package:misoua/login..dart';
-import 'package:misoua/search.dart';
+
+import './screens/home_screen.dart';
+import './screens/login_screen.dart';
+import './screens/productPage_screen.dart';
+import './widgets/search.dart';
 
 void main() => runApp(MyApp());
 
+// https://goo.gl/CP92wY  androidX migration
 class MyApp extends StatelessWidget {
   
   @override
@@ -15,14 +17,14 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: MyHomePage(),
+      home: HomeScreen(),
       debugShowCheckedModeBanner: false,
 
       routes:  {
-        DetailPage.routeName: (context) => DetailPage(),
-        FormPage.routeName: (context) => FormPage(),
-        LoginPage.routeName: (context) => LoginPage(),
-        MyHomePage.routeName: (context) => MyHomePage(),
+        ProductPageScreen.routeName: (context) => ProductPageScreen(),
+        AdvanceSearchScreen.routeName: (context) => AdvanceSearchScreen(),
+        LoginScreen.routeName: (context) => LoginScreen(),
+        HomeScreen.routeName: (context) => HomeScreen(),
       },
     );
   }
